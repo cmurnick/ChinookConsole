@@ -21,7 +21,7 @@ namespace ChinookConsole
                 connection.Open();
 
                 var cmd = connection.CreateCommand();
-                cmd.CommandText = @"SELECT Invoice.Total, Customer.Company, Customer.Country, Employee.FirstName + ' ' + Employee.LastName 
+                cmd.CommandText = @"SELECT Invoice.Total, Customer.Company, Customer.Country, Employee.FirstName, Employee.LastName 
                  from Invoice
                        join Customer on Customer.CustomerId = Invoice.CustomerId
                        join Employee on Employee.EmployeeId = Customer.CustomerId";
