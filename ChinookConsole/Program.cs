@@ -10,6 +10,14 @@ namespace ChinookConsole
     {
         static void Main(string[] args)
         {
+            var invoiceQuery = new InvoiceQuery();
+            var invoices = invoiceQuery.GetInvoiceDetails();
+
+            foreach (var invoice in invoices)
+            {
+                Console.WriteLine($"The invoice totaling {invoice.Total} was shipped to {invoice.Company} in {invoice.Country}.  Their Sales agent is {invoice.FirstName} {invoice.LastName}.");
+            }
+            Console.ReadLine();
         }
     }
 }
