@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="DataAccess\InvoiceQuery.cs" />
     <Compile Include="DataAccess\Models\Invoice.cs" />
+    <Compile Include="DataAccess\InvoiceToSalesAgentQuery.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

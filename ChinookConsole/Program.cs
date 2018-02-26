@@ -19,6 +19,20 @@ namespace ChinookConsole
                 Console.WriteLine($"The invoice totaling {invoice.Total} was shipped to {invoice.Company} in {invoice.Country}.  Their Sales agent is {invoice.FirstName} {invoice.LastName}.");
             }
             Console.ReadLine();
+
+            var invoiceToSalesAgentQuery = new InvoiceToSalesAgentQuery();
+            var invoices2 = invoiceToSalesAgentQuery.GetInvoiceBySalesAgent();
+
+            foreach (var invoice in invoices2)
+            {
+                Console.WriteLine($"{invoice.FirstName} {invoice.LastName}'s invoice Id is {invoice.InvoiceId} ");
+            }
+            Console.ReadLine();
+
+
+
         }
+
+       
     }
 }
